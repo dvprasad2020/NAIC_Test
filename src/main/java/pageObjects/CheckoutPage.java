@@ -4,13 +4,18 @@ import static junit.framework.Assert.assertTrue;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.hellofresh.challenge1.SelectBrowserType;
 
 public class CheckoutPage extends SelectBrowserType {
-    public void checkoutTest() {
+    public CheckoutPage(WebDriver driver) {
+    	driver = SelectBrowserType.driver;
+	}
+
+	public void checkoutTest() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("login"))).click();
         driver.findElement(By.id("email")).sendKeys(existingUserEmail);
         driver.findElement(By.id("passwd")).sendKeys(existingUserPassword);

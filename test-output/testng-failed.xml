@@ -5,11 +5,9 @@
     <classes>
       <class name="com.hellofresh.challenge1.RunWebTest">
         <methods>
-          <include name="LogIn"/>
           <include name="CheckOut"/>
           <include name="close"/>
           <include name="basePageNavigation"/>
-          <include name="LandPage"/>
         </methods>
       </class> <!-- com.hellofresh.challenge1.RunWebTest -->
     </classes>

@@ -38,14 +38,22 @@ public class RunWebTest extends SelectBrowserType{
 	}
 	
 	@Test(priority=1)
-	public void LogIn() {
-		objLoginPage = new LoginPage();
+	public void LogIn() throws IOException {
+		driver=initializeDriver();
+		driver.get("http://www.automationpractice.com/index.php");
+		driver.manage().window().maximize();
+		
+		objLoginPage = new LoginPage(driver);
 		objLoginPage.logInTest();
 		}
 	
 	@Test(priority=2)
-	public void CheckOut() {
-		objCheckoutPage = new CheckoutPage();
+	public void CheckOut() throws IOException {
+		driver=initializeDriver();
+		driver.get("http://www.automationpractice.com/index.php");
+		driver.manage().window().maximize();
+		
+		objCheckoutPage = new CheckoutPage(driver);
 		objCheckoutPage.checkoutTest();
 	}
 	
