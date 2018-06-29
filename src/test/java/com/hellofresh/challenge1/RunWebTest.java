@@ -32,8 +32,7 @@ public class RunWebTest extends SelectBrowserType{
 
 	@Test(priority=0)
 	public void LandPage() throws IOException {
-		objLandingPage = new LandingPage();
-		objLandingPage.initializeDriver();
+		objLandingPage = new LandingPage(driver);
 		objLandingPage.signInTest();
 		
 	}

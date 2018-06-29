@@ -10,8 +10,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SelectBrowserType {
-	public WebDriver driver;
-	public WebDriverWait wait;
+	public static WebDriver driver;
+	public static WebDriverWait wait;
     public String existingUserEmail = "mflsqe@naic.org";
     public String existingUserPassword = "mflsqe1234";
     

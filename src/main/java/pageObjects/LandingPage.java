@@ -14,7 +14,11 @@ import org.openqa.selenium.support.ui.Select;
 import com.hellofresh.challenge1.SelectBrowserType;
 
 public class LandingPage extends SelectBrowserType {
-	
+
+	public LandingPage(WebDriver driver) {
+		driver = SelectBrowserType.driver;
+	}
+
 	public void signInTest() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("login"))).click();
         String timestamp = String.valueOf(new Date().getTime());
