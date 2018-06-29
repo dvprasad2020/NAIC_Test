@@ -14,6 +14,7 @@ public class SelectBrowserType {
 	public WebDriverWait wait;
     public String existingUserEmail = "mflsqe@naic.org";
     public String existingUserPassword = "mflsqe1234";
+    
 	public WebDriver initializeDriver() throws IOException
 	{
 	Properties prop=new Properties();

@@ -6,6 +6,7 @@ import static org.testng.Assert.assertEquals;
 import java.util.Date;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -50,5 +51,6 @@ public class LandingPage extends SelectBrowserType {
         assertTrue(driver.findElement(By.className("info-account")).getText().contains("Welcome to your account."));
         assertTrue(driver.findElement(By.className("logout")).isDisplayed());
         assertTrue(driver.getCurrentUrl().contains("controller=my-account"));
+
 	}
 }
